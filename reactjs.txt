@@ -1,0 +1,60 @@
+1. What is reactjs and how is it different from other libraries/frameworks?
+2. What is JSX? What is the difference between JSX and TSX in reactjs.
+3. Explain the concept of virtual DOM , Shadow DOM in reactjs.
+4. How is virtual DOM different from real DOM
+5. What are the different types of components in reactjs?
+6. Difference between class and functional component.
+7. What is the state of reactjs?
+8. What are props and the difference between props and states.
+9. What is props drilling and alternative to it?
+10. Difference between controlled and uncontrolled components.
+11. How re-render happens when states change in reactjs?
+12. What happens if you try to update the state directly in reactjs?
+13. How to share data among sibling components?
+14. What is a styled component? Have you implemented theming in reactjs?
+15. What is the react server component?
+16. Explain lifecycle methods of components.
+17. How do functional components handle the lifecycle method of class components?
+18. How to handle side effects in class and functional components?
+19. What are react hooks? List out hooks you have used till date?
+20. Difference between useState and useRef hooks in form handling.
+21. What are the differences between useState, useContext and useReducer?
+22. What are the rules of hooks in react?
+23. What are custom hooks? Have you used it in a project, provide an example?
+24. What is a Higher order Component? Explain with examples.
+25. What is the react reconciliation process?
+26. How do react compares virtual DOM with real DOM?
+27. What are context API hooks? Explain with an example?
+28. What is the difference between useCallback and useMemo hooks.
+29. Difference between context API and redux.
+30. What is the redux toolkit? How does it simplify redux?
+31. What are middleware in redux?
+32. How would you implement a global state without redux?
+33. What is a synthetic event in react?
+34. What is the difference between a synthetic event and a real DOM event?
+35. How to pass arguments to the event handler in react?
+36. How do you handle dynamic routing in react?
+37. How do you manage form validation in react? Explain with examples.
+38. How would you implement lazy loading with routes?
+39. How do you optimize forms with hundreds of input fields in react?
+40. How would I implement a multi-step form with conditional rendering between steps?
+41. What are the keys to react? Why are they important in lists?
+42. What is react.memo and how does it work?
+43. What is the react pure component? explain with roles and use cases.
+44. What is the concept called virtualization in react?
+45. How do you optimize rendering of large lists in react?
+46. How to avoid unnecessary re-rendering in react?
+47. What is the purpose of error boundaries in react?
+48. How do you handle errors in asynchronous operations in react?
+49. How do you fetch data in react? explain with examples?
+50. What is Axios and how is it different from fetch API?
+51. How do you securely store API keys in react?
+52. How would you implement retries logic for failed API requests in react?
+53. What are fragments in react? Why are they used?
+54. What is the significance of React.StrictMode?
+55. How do you identify and fix the memory leaks in react?
+56. How do you build react applications for production?
+57. What is the major difference between webpack and babel?
+58. How do you configure webpack for react projects?
+59. How do you optimize a react application for performance?
+60. Explain the purpose of .env file in react?

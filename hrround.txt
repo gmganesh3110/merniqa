@@ -1,0 +1,27 @@
+1. How do you ensure your team delivers high-quality code within deadlines?
+2. Describe a situation where you had to mentor a junior developer. How did you handle it?
+3. Can you explain the SOLID principles and how you apply them in your designs?
+4. Explain the design pattern in javascript
+5. How do you decide which tech stack is suitable for a specific project?
+6. what is difference between development, FT, UAT , pre-prod and production environment
+7. How do you ensure 100% code coverage in your projects?
+8. Can you explain the difference between unit testing, integration testing, and functional testing?
+9. How do you secure sensitive data in a MERN stack application?
+10. Describe your experience working in an Agile/Scrum environment
+11. Explain the meetings like sprint planning, daily standup, backlog, sprint review, sprint retrospective
+12. How do you document your code and project architecture for your team?
+13. How do you onboard new developers to your team and projects?
+14. What tools do you use to track project progress and manage tasks?
+15. What are the key considerations when designing RESTful APIs?
+16. What is your approach to deploying and scaling a MERN stack application?
+17. How would you handle a situation where the application is experiencing a memory leak?
+18. A feature you implemented in React is causing performance issues. How would you debug it?
+19. What steps would you take if your database suddenly becomes a bottleneck in your application?
+20. If your team is stuck on a critical bug, how would you guide them to a solution?
+21. What is your approach to conducting code reviews?
+22. How do you optimize MongoDB queries for better performance?
+23. How do you manage error handling in an Express.js application?
+24. Explain how you would secure an Express.js API.
+25. How do you optimize React applications for performance?
+26. How do you secure a Node.js application?
+27. How would you handle database sharding and replication in MongoDB?

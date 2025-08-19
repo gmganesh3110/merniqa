@@ -1,0 +1,56 @@
+1. Explain the event loop in Node js
+2. Explain the internal architecture of Node Js
+3. What is npm and list out the uses of it.
+4. What are the different phases of event loop
+5. Explain the execution flow of Promise, async/await, setTimeout, setImmediate, process.nextTick()
+6. What is the purpose of package.json file in nodejs
+7. What is http module and create a server using it
+8. How do you create secure server setup using express and https
+9. How will u update any npm existing packages
+10. List out some of the global objects in node js
+11. Explain stream and buffer and their difference
+12. What is microtask and macrotask in node js
+13. Explain piping the data between streams
+14. What are the features of express js
+15. What happens, if we pass parameter to next function inside middleware
+16. How we can jump from one middleware to another skipping some.
+17. What is difference between PATCH and PUT API
+18. Explain the middleware concept in Node js
+19. How to create optional path API endpoints in express js
+20. Explain error handling concept in Express js
+21. What JWT and explain the structure of JWT token
+22. How can we modify the signature of JWT?
+23. WHat is the authentication and authorization concept ?
+24. How do you implement role based nad permission based access control in express js
+25. Explain in detail best practice of API
+26. Explain input validation and data sanitization concept in express js
+27. Explain the concept rate limiting in express js
+28. Explain the concept of logging and monitoring in node js application
+29. What is difference between stateless and stateful API
+30. How can we achieve state management in node js application
+31. How do you scale node js application using cluster module
+32. What is a worker thread ? how does it handle CPU-intensive tasks
+33. Explain the working with concurrency and parallelism for async task
+34. How can you optimise database queries
+35. What is the redis database? Explain the uses of it
+36. How we can increase the performance of node js application
+37. What is the profiling concept in nodejs
+38. What is connection pooling concept for database
+39. Write a middleware for role-based access control (RBAC) in Node.js
+40. Demonstrate the integration of OAuth2.0 for third-party authentication in a Node.js app.
+41. Implement a refresh token mechanism for JWT authentication in Node.js.
+42. What is role of indexes in performance optimization
+43. What is the aggregation pipeline in mongoDB? Explain in detail
+44. What are transactions? How can we achieve it in mongoDB
+45. How transaction helps in rollback in case of failure
+46. What is difference between hashing, encryption and encoding concept
+47. How do you identifies slow queries
+48. What is replica sets and sharding mechanism in mongodb
+49. How do you configure failover and disaster recovery in mongodb
+50. What is load balancer and how to implement in nodejs
+51. How to avoid schema pitfalls
+52. Measure care taken to write efficient queries
+53. How to implement health checks in mongodb
+54. What are the solid principles for software development?
+55. What is kafka? Explain the use cases of kafka
+56. How can we minimize middleware overhead
