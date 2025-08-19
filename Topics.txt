@@ -1,0 +1,21 @@
+Interview Questions Topics
+1. Javascript
+2. React JS
+3. Nodejs
+4. MYSQL
+5. PostGreSQL
+6. NestJS
+7. AWS 
+    i) EC2
+    ii) S3
+    iii) RDS
+    iv) Route 53
+    v) VPC
+    vi) CloudWatch
+    vii) Lambda
+
+Devops
+    i) Docker
+    ii) Jenkins
+    iii) Kubernetes
+    iv) Linux
