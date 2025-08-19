@@ -2,9 +2,10 @@ Interview Questions Topics
 1. Javascript
 2. React JS
 3. Nodejs
-4. MYSQL
-5. PostGreSQL
-6. NestJS
+4. NestJS
+5. MYSQL
+6. PostGreSQL
+
 7. AWS 
     i) EC2
     ii) S3
@@ -14,8 +15,10 @@ Interview Questions Topics
     vi) CloudWatch
     vii) Lambda
 
-Devops
+8. Devops
     i) Docker
     ii) Jenkins
     iii) Kubernetes
     iv) Linux
+
+9. HR Round Questions
