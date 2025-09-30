@@ -25,3 +25,56 @@
 25. How do you optimize React applications for performance?
 26. How do you secure a Node.js application?
 27. How would you handle database sharding and replication in MongoDB?
+28. Describe a time you disagreed with a technical decision. How did you handle it?
+29. Tell me about a failure. What did you learn and change afterward?
+30. How do you prioritize tasks when everything seems urgent?
+31. Describe a time you reduced technical debt meaningfully.
+32. How do you approach estimating work and handling slips?
+33. Tell me about a time you influenced without authority.
+34. How do you handle conflicts within the team?
+35. Describe a time you had to make a trade-off (speed vs quality).
+36. How do you ensure security/privacy is built into your designs?
+37. Describe a situation where you improved developer experience (DX).
+38. How do you keep yourself and the team updated with new tech?
+39. Tell me about a time you simplified a complex system.
+40. How do you communicate bad news to stakeholders?
+41. Describe a time you worked with ambiguous requirements.
+42. How do you measure the success of a project?
+43. Tell me about a time you mentored someone to a promotion.
+44. How do you ensure inclusivity and psychological safety in your team?
+45. Describe a time you handled production incident under pressure.
+46. How do you balance deep work with meetings and interrupts?
+47. Tell me about a time you drove cross-team collaboration.
+48. How do you set and track engineering OKRs or goals?
+49. Describe a time you handled scope creep effectively.
+50. How do you approach build vs buy decisions?
+51. Tell me about a time you challenged the status quo with data.
+52. How do you ensure dependable releases and rollbacks?
+53. Describe a time you implemented observability to solve an issue.
+54. How do you document decisions (ADRs) and keep them current?
+55. Tell me about a difficult stakeholder and how you managed them.
+56. How do you balance innovation with delivery commitments?
+57. Describe a time you negotiated timelines without burning out the team.
+58. How do you motivate the team during tough deadlines?
+59. Tell me about a time you handled underperformance empathetically.
+60. How do you approach risk management and mitigation?
+61. Describe a time you improved hiring or interview processes.
+62. How do you ensure ethical considerations in product decisions?
+63. Tell me about a high-impact bug you led to resolution.
+64. How do you ensure quality without blocking velocity?
+65. Describe a time you created or evolved coding standards.
+66. How do you ensure effective handoffs across time zones?
+67. Tell me about a time you removed a bottleneck in CI/CD.
+68. How do you incorporate user feedback into engineering priorities?
+69. Describe a time you balanced short-term fixes vs long-term solutions.
+70. How do you measure and reduce operational toil?
+71. Tell me about a time you managed a project with external dependencies.
+72. How do you ensure security posture stays strong over time?
+73. Describe a time you maintained morale through organizational change.
+74. How do you handle multi-tenant concerns like noisy neighbors?
+75. Tell me about a time you defined and enforced SLIs/SLOs.
+76. How do you maintain consistency across multiple services/teams?
+77. Describe a time you proactively prevented an outage.
+78. How do you guard focus time for you and your team?
+79. Tell me about a time you rallied a team around a vision.
+80. How do you ensure fairness in performance reviews?

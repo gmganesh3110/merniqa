@@ -22,3 +22,246 @@ Interview Questions Topics
     iv) Linux
 
 9. HR Round Questions
+10. DSA in Javascript
+11. DSA in MYSQL
+12. Devops Setup For Nodejs with All DevSecops
+
+---
+
+Counts Summary (Auto-computed)
+- JavaScript Interview Questions: 200
+- Node.js Interview Questions: 100
+- React.js Interview Questions: 100
+- NestJS Interview Questions: 100
+- MySQL Interview Questions: 100
+- PostgreSQL Interview Questions: 100
+- AWS Interview Questions: 200
+- DevOps Interview Questions: 200
+- HR Round Questions: 80
+- JS DSA Problems (files in `JSProblems/`): 133
+- MySQL Problems (files in `MySQLProblems/`): 35
+- Total Interview Questions (tech only): 1180
+- Total Problems (DSA + MySQL): 168
+- Overall Items (Questions + Problems): 1348
+
+---
+
+90-Day Day-wise Preparation Plan
+
+Day 1: JS fundamentals refresh; scopes, hoisting; set up dev environment
+Day 2: JS `this`, call/apply/bind; prototypes vs classes; practice 10 Qs
+Day 3: Closures, currying, debounce/throttle; 2 DSA easy arrays
+Day 4: Event loop, micro/macro tasks; Promise patterns; 2 DSA strings
+Day 5: ES6+ features; modules (ESM/CJS); 2 DSA hashing
+Day 6: Error handling, custom errors; strict mode; 2 DSA stacks/queues
+Day 7: Advanced types in TS overview; generics; 2 DSA two-pointers
+
+Day-wise File References
+
+Day 1: `Javascript.txt` (basics), `JSProblems/01_two_sum.js`, `JSProblems/02_valid_parentheses.js`
+Day 2: `Javascript.txt` (this, prototypes), `JSProblems/03_merge_two_sorted_lists.js`
+Day 3: `Javascript.txt` (closures), `JSProblems/04_best_time_to_buy_and_sell_stock.js`, `JSProblems/05_valid_anagram.js`
+Day 4: `Javascript.txt` (event loop), `JSProblems/06_contains_duplicate.js`, `JSProblems/07_maximum_subarray.js`
+Day 5: `Javascript.txt` (ES6), `JSProblems/08_move_zeroes.js`, `JSProblems/09_binary_search.js`
+Day 6: `Javascript.txt` (errors), `JSProblems/10_valid_palindrome.js`, `JSProblems/11_first_unique_character_in_string.js`
+Day 7: `Javascript.txt` (TS differences), `JSProblems/12_intersection_of_two_arrays_ii.js`
+
+Day 8: `nodejs.txt` (event loop), `JSProblems/13_plus_one.js`, `JSProblems/14_reverse_linked_list.js`
+Day 9: `nodejs.txt` (Express), `JSProblems/15_min_stack.js`
+Day 10: `nodejs.txt` (Auth), `JSProblems/16_meeting_rooms.js`, `JSProblems/17_linked_list_cycle.js`
+Day 11: `nodejs.txt` (validation), `JSProblems/18_implement_queue_using_stacks.js`
+Day 12: `nodejs.txt` (streams), `JSProblems/19_minimum_size_subarray_sum.js`
+Day 13: `nodejs.txt` (Redis), `JSProblems/20_longest_substring_without_repeating_characters.js`
+Day 14: `nodejs.txt` (testing), `JSProblems/21_valid_sudoku.js`
+
+Day 15: `reactjs.txt` (basics), `JSProblems/22_group_anagrams.js`
+Day 16: `reactjs.txt` (hooks), `JSProblems/23_top_k_frequent_elements.js`
+Day 17: `reactjs.txt` (memo), `JSProblems/24_product_of_array_except_self.js`
+Day 18: `reactjs.txt` (forms), `JSProblems/25_kth_largest_element_in_array.js`
+Day 19: `reactjs.txt` (state mgmt), `JSProblems/26_course_schedule.js`, `JSProblems/27_number_of_islands.js`
+Day 20: `reactjs.txt` (routing), `JSProblems/28_rotate_image.js`
+Day 21: `reactjs.txt` (perf), `JSProblems/29_spiral_matrix.js`, `JSProblems/30_subarray_sum_equals_k.js`
+
+Day 22: `nestjs.txt` (architecture), `JSProblems/31_3sum.js`
+Day 23: `nestjs.txt` (DTOs), `JSProblems/32_binary_tree_level_order_traversal.js`
+Day 24: `nestjs.txt` (guards), `JSProblems/33_construct_binary_tree_from_preorder_inorder.js`
+Day 25: `nestjs.txt` (config), `JSProblems/34_longest_palindromic_substring.js`
+Day 26: `nestjs.txt` (cache/CQRS), `JSProblems/35_decode_ways.js`
+Day 27: `nestjs.txt` (Swagger), `JSProblems/36_coin_change.js`
+Day 28: `nestjs.txt` (queues), `JSProblems/37_word_break.js`
+
+Day 29: `mysql.txt` (joins), `MySQLProblems/01_select_top_n_employees.sql`
+Day 30: `mysql.txt` (indexes), `MySQLProblems/15_explain_and_indexing_strategy.sql`, `MySQLProblems/30_covering_index_only_scan.sql`
+Day 31: `mysql.txt` (windows), `MySQLProblems/18_window_frame_edges.sql`, `MySQLProblems/21_window_rank_ties.sql`
+Day 32: `mysql.txt` (transactions), `MySQLProblems/16_transactions_and_isolation.sql`
+Day 33: `mysql.txt` (partition/JSON), `MySQLProblems/17_partitioning_range_dates.sql`, `MySQLProblems/13_json_extract_and_filter.sql`
+Day 34: `pgsql.txt` (CTEs/windows)
+Day 35: `mysql.txt` (schema), `MySQLProblems/23_scd_type2_customer_dimension.sql`, `MySQLProblems/24_materialized_daily_agg.sql`
+
+Day 36: `aws.txt` (IAM/VPC/SG), `DevSecOps_NestJS_Production_Guide.md` (Day 36–42 Start)
+Day 37: `aws.txt` (EC2), `DevSecOps_NestJS_Production_Guide.md` (EC2 section)
+Day 38: `aws.txt` (ECR), `DevSecOps_NestJS_Production_Guide.md` (ECR section)
+Day 39: `aws.txt` (Route53), `DevSecOps_NestJS_Production_Guide.md` (Ingress/DNS)
+Day 40: `aws.txt` (ACM), `DevSecOps_NestJS_Production_Guide.md` (cert-manager)
+Day 41: `aws.txt` (CloudWatch), `DevSecOps_NestJS_Production_Guide.md` (Observability)
+Day 42: `aws.txt` (S3), `DevSecOps_NestJS_Production_Guide.md` (Backups)
+
+Day 43: `devops.txt` (Docker), `DevSecOps_NestJS_Production_Guide.md` (Dockerfile)
+Day 44: `devops.txt` (Compose), `DevSecOps_NestJS_Production_Guide.md` (Docker Compose)
+Day 45: `devops.txt` (Trivy), `DevSecOps_NestJS_Production_Guide.md` (Trivy)
+Day 46: `devops.txt` (Registries), `DevSecOps_NestJS_Production_Guide.md` (ECR push)
+Day 47: `devops.txt` (SBOM), `DevSecOps_NestJS_Production_Guide.md` (Pipeline)
+Day 48: `devops.txt` (Image best practices), `DevSecOps_NestJS_Production_Guide.md`
+Day 49: `devops.txt` (Signing), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 50: `devops.txt` (Jenkins install), `DevSecOps_NestJS_Production_Guide.md` (Jenkins)
+Day 51: `devops.txt` (Credentials), `DevSecOps_NestJS_Production_Guide.md` (Creds)
+Day 52: `devops.txt` (Pipeline stages), `DevSecOps_NestJS_Production_Guide.md`
+Day 53: `devops.txt` (Quality gates), `DevSecOps_NestJS_Production_Guide.md`
+Day 54: `devops.txt` (Push to ECR), `DevSecOps_NestJS_Production_Guide.md`
+Day 55: `devops.txt` (Notifications), `DevSecOps_NestJS_Production_Guide.md`
+Day 56: `devops.txt` (Reproducibility), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 57: `devops.txt` (EKS), `DevSecOps_NestJS_Production_Guide.md` (EKS)
+Day 58: `devops.txt` (kubectl), `DevSecOps_NestJS_Production_Guide.md` (kubectl)
+Day 59: `devops.txt` (Ingress/ALB), `DevSecOps_NestJS_Production_Guide.md`
+Day 60: `devops.txt` (cert-manager), `DevSecOps_NestJS_Production_Guide.md`
+Day 61: `devops.txt` (Deployments/Services), `DevSecOps_NestJS_Production_Guide.md`
+Day 62: `devops.txt` (HPA/resources), `DevSecOps_NestJS_Production_Guide.md`
+Day 63: `devops.txt` (RBAC/IRSA), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 64: `devops.txt` (Config/Secrets), `DevSecOps_NestJS_Production_Guide.md`
+Day 65: `devops.txt` (NetworkPolicies), `DevSecOps_NestJS_Production_Guide.md`
+Day 66: `devops.txt` (Gatekeeper/Kyverno), `DevSecOps_NestJS_Production_Guide.md`
+Day 67: `devops.txt` (PodSecurity), `DevSecOps_NestJS_Production_Guide.md`
+Day 68: `devops.txt` (Probes), `DevSecOps_NestJS_Production_Guide.md`
+Day 69: `devops.txt` (Blue/green/canary), `DevSecOps_NestJS_Production_Guide.md`
+Day 70: `devops.txt` (Rollbacks), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 71: `devops.txt` (Prometheus/Grafana), `DevSecOps_NestJS_Production_Guide.md`
+Day 72: `devops.txt` (Loki/ELK), `DevSecOps_NestJS_Production_Guide.md`
+Day 73: `devops.txt` (Alerting/SLOs), `DevSecOps_NestJS_Production_Guide.md`
+Day 74: `devops.txt` (Tracing), `DevSecOps_NestJS_Production_Guide.md`
+Day 75: `devops.txt` (Structured logs), `DevSecOps_NestJS_Production_Guide.md`
+Day 76: `devops.txt` (Synthetic checks), `DevSecOps_NestJS_Production_Guide.md`
+Day 77: `devops.txt` (Runbooks), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 78: `devops.txt` (Security review), `DevSecOps_NestJS_Production_Guide.md`
+Day 79: `devops.txt` (Secrets rotation), `DevSecOps_NestJS_Production_Guide.md`
+Day 80: `devops.txt` (Backup/restore), `DevSecOps_NestJS_Production_Guide.md`
+Day 81: `devops.txt` (Cost optimization), `DevSecOps_NestJS_Production_Guide.md`
+Day 82: `devops.txt` (Perf profiling), `DevSecOps_NestJS_Production_Guide.md`
+Day 83: `devops.txt` (API hardening), `DevSecOps_NestJS_Production_Guide.md`
+Day 84: `devops.txt` (DR strategy), `DevSecOps_NestJS_Production_Guide.md`
+
+Day 85: `Topics.txt` (System design prompts); review `aws.txt`, `devops.txt`
+Day 86: `Topics.txt` (System design prompts); review `nodejs.txt`, `nestjs.txt`
+Day 87: `Topics.txt` (System design prompts); review `mysql.txt`, `pgsql.txt`
+Day 88: `Topics.txt` (System design prompts); review `reactjs.txt`
+Day 89: Full mock interview across files above
+Day 90: Final review notes across all `.txt`, `DevSecOps_NestJS_Production_Guide.md`
+
+Day 8: Node process model, libuv; tick order; 2 DSA sliding window
+Day 9: Express basics, middleware; structured logging; 2 DSA binary search
+Day 10: AuthN/Z basics; JWT flows; 2 DSA linked lists
+Day 11: Validation/sanitization; rate limiting; 2 DSA trees basics
+Day 12: Async patterns (streams, backpressure); 2 DSA tree traversals
+Day 13: Caching strategies; Redis intro; 2 DSA BFS/DFS
+Day 14: Testing Node (Jest, supertest); 2 DSA recursion
+
+Day 15: React basics; JSX, state, props; 2 DSA recursion/backtracking
+Day 16: Hooks (`useState`, `useEffect`), rules; 2 DSA subsets/combinations
+Day 17: `useMemo`, `useCallback`, memoization; 2 DSA DP intro
+Day 18: Forms, controlled components; 2 DSA DP 1D
+Day 19: Context vs Redux Toolkit; 2 DSA DP 2D
+Day 20: Router, code-splitting; 2 DSA greedy
+Day 21: Perf: virtualization, avoiding re-renders; 2 DSA intervals
+
+Day 22: NestJS architecture: modules, providers, controllers; 2 DSA graphs
+Day 23: DTOs, pipes, validators; 2 DSA topological sort
+Day 24: Guards, interceptors, filters; 2 DSA union-find
+Day 25: ConfigModule, env management; 2 DSA heaps
+Day 26: Caching (CacheModule, Redis), CQRS; 2 DSA trie
+Day 27: Swagger/OpenAPI; versioning; 2 DSA binary tree DP
+Day 28: Task scheduling, queues (Bull); 2 DSA segment tree (intro)
+
+Day 29: SQL foundations; joins, grouping; 2 DSA segment tree (lazy)
+Day 30: Indexing, EXPLAIN, covering indexes; 2 DSA suffix array basics
+Day 31: Window functions; 2 DSA suffix automaton basics
+Day 32: Transactions, isolation levels; 2 DSA KMP/Z algorithms
+Day 33: MySQL partitioning, JSON funcs; 2 DSA Aho-Corasick (intro)
+Day 34: PostgreSQL windowing, CTEs; 2 DSA flow (Edmonds-Karp)
+Day 35: Schema design, normalization; 2 DSA flow (Dinic)
+
+Day 36: AWS basics: IAM, VPC, subnets, SGs; 2 DSA LIS/LCS
+Day 37: EC2 setup Ubuntu 24; hardening; 2 DSA matrix DP
+Day 38: ECR repo, pushing images; 2 DSA monotonic stack
+Day 39: Route53 hosted zone, records; 2 DSA bit manipulation
+Day 40: ACM certs; validation methods; 2 DSA math/combinatorics
+Day 41: CloudWatch basics; alarms; 2 DSA probability basics
+Day 42: S3 for artifacts/backups; 2 DSA string hashing
+
+Day 43: Dockerfile multi-stage; best practices; 2 DSA tries practice
+Day 44: Docker Compose (Postgres, Redis, app); 2 DSA heap practice
+Day 45: Image scanning with Trivy; 2 DSA graph practice
+Day 46: Private registries and policies; 2 DSA DP practice
+Day 47: Build cache optimization; 2 DSA tree practice
+Day 48: SBOM basics; 2 DSA intervals practice
+Day 49: Image signing (cosign overview); 2 DSA mixed practice
+
+Day 50: Jenkins install, plugins, agents; 2 DSA backtracking practice
+Day 51: Credentials binding, secrets; 2 DSA advanced DP
+Day 52: Pipeline stages: lint, test, sonar, build; 2 DSA geometry basics
+Day 53: Trivy in pipeline; quality gates; 2 DSA geometry practice
+Day 54: Tagging, pushing to ECR; 2 DSA advanced graphs
+Day 55: Notifications (email/slack); 2 DSA hard practice
+Day 56: Build reproducibility; cache; 2 DSA review day
+
+Day 57: EKS creation with eksctl; 2 DSA trees review
+Day 58: Kubectl essentials; contexts; 2 DSA arrays review
+Day 59: Ingress with ALB; external-dns; 2 DSA strings review
+Day 60: cert-manager & ClusterIssuer; 2 DSA graphs review
+Day 61: Deploy app: Deployment/Service; 2 DSA DP review
+Day 62: HPA & resource requests/limits; 2 DSA mixed
+Day 63: RBAC, IRSA basics; 2 DSA mixed
+
+Day 64: ConfigMaps, Secrets, CSI; 2 DSA mixed practice
+Day 65: NetworkPolicies; zero trust basics; 2 DSA mixed
+Day 66: Gatekeeper/Kyverno policies; 2 DSA mixed
+Day 67: PodSecurity admission; 2 DSA mixed
+Day 68: Readiness/liveness/startup probes; 2 DSA mixed
+Day 69: Blue/green & canary strategies; 2 DSA mixed
+Day 70: Rollbacks, surge/unavailable tuning; 2 DSA mixed
+
+Day 71: Prometheus Operator; Grafana dashboards; 2 DSA mixed
+Day 72: Loki/Promtail or ELK setup; 2 DSA mixed
+Day 73: Alerting rules; SLOs/SLIs; 2 DSA mixed
+Day 74: Distributed tracing (OpenTelemetry overview); 2 DSA mixed
+Day 75: Logging correlation, structured logs; 2 DSA mixed
+Day 76: Synthetic checks and uptime; 2 DSA mixed
+Day 77: Incident runbooks and on-call; 2 DSA mixed
+
+Day 78: Security posture review; dependency updates; 2 DSA mixed
+Day 79: Secrets rotation playbook; 2 DSA mixed
+Day 80: Backup/restore drills (DB, Jenkins); 2 DSA mixed
+Day 81: Cost optimization (Graviton, lifecycle); 2 DSA mixed
+Day 82: Performance profiling (Node/React); 2 DSA mixed
+Day 83: API hardening, rate limits, WAF overview; 2 DSA mixed
+Day 84: DR strategy, RTO/RPO validation; 2 DSA mixed
+
+Day 85: System design practice: API gateway + microservices
+Day 86: System design practice: messaging + eventual consistency
+Day 87: System design practice: caching + sharding
+Day 88: System design practice: multi-region active-passive
+Day 89: Full mock interview (coding + system design)
+Day 90: Final review, notes consolidation, resume/github polish
+
+Notes:
+- Each day: 60–90 min reading/building + 60–90 min coding (DSA or labs).
+- Replace placeholders (region, domain, IDs) and commit daily progress.
+- Use the checklists in the DevSecOps guide for verification after each module.
+
+
+
+Per 4 15 Questions 4 DSA Problems
+AND EACH WEEK Revision

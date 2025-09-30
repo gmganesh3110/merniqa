@@ -58,3 +58,105 @@
 58. How do you configure webpack for react projects?
 59. How do you optimize a react application for performance?
 60. Explain the purpose of .env file in react?
+
+React Interview Questions (Easy → Advanced)
+1. What is React and why was it created?
+2. What is JSX and why use it?
+3. How does JSX differ from HTML?
+4. What are components in React?
+5. Difference between functional and class components?
+6. What are props in React?
+7. What is state in React?
+8. Difference between props and state.
+9. How to pass data from parent to child?
+10. How to lift state up from child to parent?
+11. What are controlled vs uncontrolled components?
+12. What is the purpose of keys in lists?
+13. What are fragments and why use them?
+14. What is React.StrictMode?
+15. What is the virtual DOM?
+16. How does diffing/reconciliation work conceptually?
+17. What triggers a re-render in React?
+18. How do you prevent unnecessary re-renders?
+19. What is React.memo and when to use it?
+20. What is useState and how does it work?
+21. What is useEffect and common pitfalls?
+22. What is the dependency array in useEffect?
+23. How to cleanup effects correctly?
+24. Difference between useEffect and useLayoutEffect.
+25. What is useRef and common use cases?
+26. Difference between useRef and useState.
+27. What is useMemo and when to use it?
+28. What is useCallback and when to use it?
+29. Rules of Hooks and why they exist.
+30. Custom hooks: what and why?
+31. Provide an example custom hook.
+32. What is Context API and when to use it?
+33. How to avoid prop drilling without Redux?
+34. What are render props and use cases?
+35. What are Higher-Order Components (HOC)?
+36. Differences between HOCs and custom hooks.
+37. How to handle forms in React?
+38. How to manage complex form state efficiently?
+39. How to validate forms (Formik/React Hook Form)?
+40. How to handle async validation in forms?
+41. How to handle routing in React?
+42. Route params, search params, and dynamic routing.
+43. How to implement lazy loading with routes?
+44. What is code splitting and how to do it in React?
+45. Suspense: what is it and current use cases.
+46. Error boundaries: what and how to implement.
+47. How to handle async errors in React.
+48. How to fetch data in React?
+49. Compare fetch vs Axios vs React Query.
+50. How to implement retries and backoff for API calls.
+51. How to cancel in-flight requests.
+52. What is SWR/React Query and cache invalidation basics.
+53. Handling race conditions in async UI flows.
+54. What is state management and when do you need Redux?
+55. Redux basics: store, actions, reducers.
+56. Redux Toolkit: slices, immer, thunks.
+57. Difference between Redux and Context API.
+58. Middleware in Redux and use cases.
+59. What is reselect and memoized selectors.
+60. What is React Server Components (RSC) conceptually?
+61. SSR vs SSG vs CSR differences.
+62. Hydration: what and why it matters.
+63. Streaming SSR basics.
+64. Next.js routing/app router basics.
+65. Data fetching patterns in Next.js.
+66. How to manage environment variables in React.
+67. How to secure API keys/secrets in front-end.
+68. How to mitigate XSS in React apps.
+69. How to prevent CSRF in React-backed flows.
+70. Accessibility basics: ARIA, focus management.
+71. How to manage focus on route/page change.
+72. Keyboard navigation and forms accessibility.
+73. Performance optimization: virtualization for large lists.
+74. Avoiding layout thrashing in React.
+75. Batching state updates in React.
+76. Concurrent Features overview (setTransition, Suspense for data).
+77. useTransition and useDeferredValue use cases.
+78. How to profile React renders.
+79. Using React DevTools Profiler effectively.
+80. Memoization pitfalls and when not to memoize.
+81. Avoid stale closures in hooks.
+82. Avoid re-creating functions/objects in dependencies.
+83. Testing React components: unit vs integration.
+84. Testing library vs Enzyme differences.
+85. How to test hooks and async components.
+86. Mocking fetch/axios and timers in tests.
+87. Snapshot testing pros/cons.
+88. Visual regression testing overview.
+89. Internationalization in React apps.
+90. Theming with styled-components/Emotion.
+91. CSS Modules vs CSS-in-JS vs Tailwind in React.
+92. Handling CSS specificity and conflicts.
+93. Managing very large forms and performance.
+94. Drag-and-drop implementations and pitfalls.
+95. WebSockets/SSE in React apps.
+96. Offline support and service workers.
+97. Error logging and monitoring in React.
+98. Feature flags and remote config in React apps.
+99. Deploying React apps and cache busting.
+100. Common production pitfalls and anti-patterns in React.

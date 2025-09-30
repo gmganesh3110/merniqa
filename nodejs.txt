@@ -54,3 +54,182 @@
 54. What are the solid principles for software development?
 55. What is kafka? Explain the use cases of kafka
 56. How can we minimize middleware overhead
+
+Advanced Node.js (10+ years)
+1. Explain libuv architecture: thread pool, I/O polling, and platform differences.
+2. Detail Node.js event loop phases vs microtasks vs process.nextTick vs setImmediate.
+3. Diagnose memory leaks in Node: heap snapshots, allocation sampling, weak refs.
+4. CPU profiling in production: perf hooks, inspector, flamegraphs, safe sampling.
+5. Backpressure and flow control with Node streams; highWaterMark tuning.
+6. Design streaming pipelines with Transform streams; error and teardown handling.
+7. Compare Worker Threads, Cluster, Child Processes; when to use each and why.
+8. Async context propagation with AsyncLocalStorage/AsyncResource across boundaries.
+9. Implement graceful shutdown: signals, draining, inflight tracking, idempotent close.
+10. Resilience strategies: retries, circuit breakers, bulkheads, timeouts, budgets.
+11. HTTP server tuning: keep-alive, headers timeout, request timeout, slowloris defense.
+12. HTTP/2 and HTTP/3 in Node: multiplexing, flow control, prioritization considerations.
+13. Advanced TLS: ALPN, OCSP stapling, SNI, session resumption, mutual TLS.
+14. Node fetch vs core http/https vs undici: streaming, cancellation, connection pools.
+15. Operational metrics: event loop lag, heap used, RSS, GC pauses, custom RED/USE.
+16. GC tuning: generational GC, flags, diagnosing GC storms, object churn reduction.
+17. Native addons: N-API vs node-addon-api; ABI stability and deployment concerns.
+18. Packaging/exports: conditional exports, dual ESM/CJS, subpath patterns and traps.
+19. Top-level await in Node ESM: startup behavior, deadlocks, and dependency cycles.
+20. Module resolution rules across Node versions; pnpm/npm/yarn impacts.
+21. Security hardening: sandboxing vm, realms, policy.json, fs restrictions.
+22. Supply chain security: lockfiles, integrity, provenance, auditing, minimal perms.
+23. Secrets management: env injection, runtime KMS, rotation, process safety.
+24. Process management: systemd, PM2, containers; health checks and watchdogs.
+25. Observability: OpenTelemetry tracing/metrics/logs; context propagation pitfalls.
+26. Logging at scale: structured logs, sampling, redaction, PII handling, log routing.
+27. Rate limiting and load shedding: token buckets, leaky buckets, concurrency caps.
+28. Cache strategies in Node: LRU/LFU, TTL jitter, stampede protection, SWR.
+29. Distributed locks and leader election patterns for multi-instance Node apps.
+30. Data streaming: Kafka clients, exactly-once semantics, backpressure coordination.
+31. Database connection pools: tuning, exhaustion handling, failover/retries, timeouts.
+32. Transactions across services: sagas, outbox/inbox patterns, idempotency keys.
+33. Zero-downtime deploys: connection draining, schema migration strategies.
+34. API versioning strategies and deprecation policies at scale.
+35. Schema validation at boundaries: AJV performance, security, error taxonomy.
+36. AuthN/Z at scale: OIDC/OAuth2, JWTs, JTI/rotation, key management, mTLS.
+37. Multi-tenant isolation in Node services: per-tenant limits and noisy neighbor control.
+38. WebSockets/SSE: scaling, heartbeats, backpressure, reconnection strategies.
+39. Job queues and schedulers: BullMQ/Agenda/RabbitMQ; retries and deduplication.
+40. Time handling: time zones, monotonic clocks, clock skew, cron pitfalls.
+41. Feature flags and config: dynamic rollout, kill switches, safe evaluation.
+42. Testing async/concurrency: fake timers, real timers, flake triage, hermetic tests.
+43. Contract testing and mocks vs fakes; consumer-driven contracts in Node.
+44. Monorepo management: workspaces, hoisting, constraints, build graph caching.
+45. Performance budgets and SLOs for Node services; enforcing guardrails.
+46. Handling large payloads: streaming parsers, limits, DoS protections.
+47. File IO at scale: streams, mmap alternatives, temp files, cleanup reliability.
+48. Graceful file watchers and hot-reload: fs events pitfalls across platforms.
+49. Implement blue/green and canary releases with Node-based services.
+50. Disaster recovery: backups, restore drills, chaos engineering for Node stacks.
+
+Experience Bands (Node.js)
+0–2 years (Foundations)
+- Core: modules, npm scripts, package.json, env vars, basic debugging
+- HTTP: express basics, routing, middleware, error handling, REST basics
+- Async: callbacks/Promises/async-await, setTimeout/Immediate, process.nextTick
+- Data: CRUD with one DB, connection basics, basic indexes
+- Streams/buffers: read/write basics, piping
+- Security basics: Helmet, input validation, rate limits, CORS
+
+3–6 years (Intermediate)
+- Architecture: layered structure, config management, feature flags
+- Observability: logs, metrics, tracing basics; health checks
+- Performance: clustering basics, connection pools, caching (Redis)
+- Testing: integration tests, mocking IO, concurrency tests, CI basics
+- Reliability: retries/timeouts/circuit breakers, graceful shutdown basics
+- Packaging: ESM/CJS interop, exports field, Docker basics
+
+7–10 years (Advanced)
+- libuv/event loop internals; tuning server timeouts and keep-alive
+- Streams and backpressure at scale; memory/GC tuning; leak diagnosis
+- Concurrency: Worker Threads vs Cluster vs processes, scheduling trade-offs
+- Security & supply chain: policy.json, provenance, least-privilege, secret rotation
+- Large scale ops: OpenTelemetry, SLOs, budgets, traffic shaping, load shedding
+- Data & messaging: Kafka patterns, idempotency/outbox, distributed locks
+
+Node.js Interview Questions (Easy → Advanced)
+1. What is Node.js and what problem does it solve?
+2. How does Node differ from browser JavaScript?
+3. What is npm and what is a package?
+4. What does package.json contain?
+5. What are devDependencies vs dependencies?
+6. How do you use npm scripts?
+7. What is npx and when to use it?
+8. What is the Node REPL?
+9. How do you read environment variables in Node?
+10. What are CommonJS modules? How to export/import?
+11. What are ES modules in Node? How to enable/use?
+12. Difference between require and import in Node.
+13. What is the event loop in Node?
+14. What are the event loop phases?
+15. What is process.nextTick vs microtasks vs setImmediate?
+16. What are Buffers in Node?
+17. What are Streams in Node?
+18. Readable vs Writable vs Duplex vs Transform streams.
+19. How does piping work between streams?
+20. What is backpressure in streams?
+21. What are global objects in Node?
+22. How to create a basic HTTP server in Node.
+23. What is Express and why use it?
+24. How to define routes and middleware in Express.
+25. Error-handling middleware signature and usage.
+26. How to serve static files in Express.
+27. What is CORS and how to enable it in Express.
+28. How to parse JSON and URL-encoded bodies.
+29. How to organize Express app structure.
+30. What is a RESTful API and basic best practices.
+31. What is MVC/layered architecture in Node apps.
+32. How to connect Node to a database (e.g., MongoDB/Postgres).
+33. What is connection pooling and why use it?
+34. How to handle database migrations.
+35. How to use environment-based config in Node.
+36. How to log in Node (console vs libraries).
+37. What is Winston/Pino and why use them.
+38. How to handle unhandledRejection and uncaughtException.
+39. What are status codes and common ones in APIs.
+40. How to implement input validation in Express.
+41. What is JOI/AJV and when to use them.
+42. What is JWT and typical structure (header/payload/signature).
+43. How to implement login with JWT in Node.
+44. How to implement refresh tokens.
+45. Role-based vs permission-based access control.
+46. How to hash passwords in Node (bcrypt/argon2).
+47. Rate limiting strategies in Node APIs.
+48. How to secure HTTP headers (Helmet).
+49. How to prevent NoSQL/SQL injection.
+50. What is CORS preflight in Node.
+51. How to paginate API results efficiently.
+52. How to implement file uploads in Node.
+53. Sending emails from Node apps.
+54. Scheduling tasks (cron) in Node.
+55. How to test Node apps (unit/integration).
+56. Mocking external services in tests.
+57. Using supertest for HTTP tests.
+58. Using fake timers in Node tests.
+59. Avoid test flakiness in async code.
+60. What is clustering in Node and why use it?
+61. What are Worker Threads and use cases.
+62. When to use child_process in Node.
+63. How to share state between processes/threads.
+64. Graceful shutdown of Node servers.
+65. Handling SIGTERM/SIGINT signals.
+66. Health checks and readiness/liveness probes.
+67. Observability: logs, metrics, traces in Node.
+68. How to measure event loop lag.
+69. CPU profiling Node apps.
+70. Memory leak detection in Node.
+71. Garbage collection overview in Node.
+72. Tuning Node memory limits.
+73. Using undici vs http/https vs node-fetch.
+74. HTTP keep-alive and connection pooling.
+75. HTTP/2 in Node: benefits and caveats.
+76. TLS basics in Node servers.
+77. Performance best practices in Node APIs.
+78. Compression and caching headers in Node.
+79. Static asset serving patterns from Node.
+80. Using Redis for caching in Node apps.
+81. Pub/sub and queues in Node (BullMQ/RabbitMQ).
+82. Idempotency and deduplication in distributed tasks.
+83. Sagas and outbox patterns in Node services.
+84. Feature flags and configuration management.
+85. Blue/green and canary deployments with Node.
+86. Zero-downtime deploys; connection draining.
+87. Dockerizing a Node app.
+88. CI/CD basics for Node apps.
+89. Security scanning and dependency audit.
+90. policy.json and permission model basics.
+91. ESM/CJS interop issues and conditional exports.
+92. Top-level await implications in Node ESM.
+93. Monorepos/workspaces for Node projects.
+94. Versioning APIs and deprecations policies.
+95. Multi-tenant isolation strategies in Node.
+96. WebSockets/SSE scaling strategies.
+97. Handling large file uploads/streams.
+98. Time handling: clock skew, monotonic timers.
+99. Disaster recovery for Node services.
+100. Common production postmortem patterns in Node.

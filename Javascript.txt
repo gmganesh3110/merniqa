@@ -1,10 +1,62 @@
-1. What is Javascript
+1. What is Javascript?
+    JavaScript is a high-level, interpreted, and open-source programming language 
+    that supports all browser functionalities, 
+    as well as functional and object-oriented programming. It is dynamically typed.
+
+    i) Creating interactive web pages and user interfaces.
+    ii) Developing mobile and desktop applications.
+    iii) Implementing server-side programming with environments like Node.js.
+
+
 2. What are the different types in Javascript?
+    primitive datatypes
+        i) undefined,
+        ii) null
+        iii) Boolean
+        iv) Number
+        v) BigInt
+        vi) string
+        vii) Symbol 
+    non primitive data types
+        i) Object
+        ii) array
+        iii) Function
+        iv) Map and set
+        v) date
+        vi) Error Promise array Buffer
+
 3. What is hoisting in Javascript?
+    Hoisting is JavaScript's default behavior of moving declarations
+    (variables and functions) to the top of their containing scope
+    The Key Thing to Remember: Only the declarations are hoisted, 
+    not the initializations (assignments of values).
+
+    1. Variable Hoisting
+    When a var variable is hoisted, it is initialized with the value undefined.
+
+    2. let and const Hoisting (The "Temporal Dead Zone")
+    let and const are also hoisted, but they are not initialized.
+
+    3.Function Hoisting
+    Function declarations are fully hoisted—their entire definition is moved to the top. 
+    This means you can call a function before it's declared in your code.
+
 4. What is the difference between null and undefined?
+    i) undefined means a variable has been declared but not yet assigned a value
+    ii) null is an assignment value. It represents the intentional absence of any object value. 
+    null data type is object.
+
 5. What are closures in Javascript?
+    This is when an inner function has access to the variables of an outer function,
+     long after the outer function has returned
+    
 6. What is a callback function in Javascript?
+A callback function is a function that is passed as an argument to another function 
+    and is executed after the first function has completed its task or at a specific time.
 7. What are promises in Javascript?
+    A Promise is an object that represents the eventual completion (or failure) of 
+    an asynchronous operation and provides a way to handle its resulting value.
+    then catch finally
 8. What is the purpose of the setTimeout() function in Javascript?
 9. How can you check if an array includes a certain value?
 10. What is the purpose of async and await in Javascript?
@@ -155,3 +207,282 @@ HTTP API Responses
 - 𝟱𝟬𝟮 𝗕𝗮𝗱 𝗚𝗮𝘁𝗲𝘄𝗮𝘆: Invalid response from another server
 - 𝟱𝟬𝟯 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗨𝗻𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲: Server unavailable
 - 𝟱𝟬𝟰 𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗧𝗶𝗺𝗲𝗼𝘂𝘁: Server took too long to respond
+
+Advanced JavaScript (10+ years)
+1. Explain microtasks vs macrotasks; where starvation can occur in real apps.
+2. How to find and fix memory leaks in browser/Node (tools, patterns, pitfalls).
+3. V8 internals: hidden classes, inline caches, shape changes, and performance.
+4. Common V8 deoptimization triggers; how to detect deopts and refactor them.
+5. Profiling: using Performance panel, CPU/heap profiles, flamegraphs effectively.
+6. Backpressure: Streams API (web/Node) and designing robust pipelines.
+7. Async iterators vs Promises: cancellation, sequencing, and resource cleanup.
+8. Cancellation patterns with AbortController/AbortSignal; interoperating libraries.
+9. WeakMap/WeakSet/WeakRef/FinalizationRegistry: safe use cases and risks.
+10. structuredClone vs JSON stringify/parse vs cloning libraries; edge cases.
+11. Proxy/Reflect for metaprogramming: capabilities, traps, and production patterns.
+12. Private fields, decorators status, and library API design implications.
+13. ESM vs CJS: interop traps, default vs named, top-level await, import attributes.
+14. Node dual packages: exports/conditions, require/import maps, tooling pitfalls.
+15. Node event loop phases: nextTick vs microtasks vs setImmediate, libuv nuances.
+16. Worker Threads vs Cluster vs Child Processes: trade-offs and monitoring.
+17. Async context propagation: AsyncLocalStorage, AsyncResource, tracing hooks.
+18. Hardening services: unhandledRejection/uncaughtException strategies and policies.
+19. Tree-shaking: sideEffects flag, module boundaries, dynamic imports and DCE.
+20. Code splitting strategies across bundlers (Webpack/Rollup/esbuild/Vite).
+21. Performance budgets; bundle analysis; source maps and production profiling.
+22. CSP/Trusted Types/XSS mitigations; prototype pollution prevention patterns.
+23. Cross-realm hazards (iframes/workers) and reliable type/instance checks.
+24. Intl APIs (NumberFormat/DateTimeFormat/Collator) and i18n perf considerations.
+25. Temporal vs Date: correctness, time zones, migration strategies.
+26. High-frequency UI loops: rAF vs rIC vs setTimeout; long tasks mitigation.
+27. Concurrency primitives: SharedArrayBuffer, Atomics, memory model basics.
+28. Parallelism: Web Workers/Worklets/OffscreenCanvas messaging and lifecycles.
+29. WebAssembly interop: data marshaling, perf trade-offs, and good use cases.
+30. Advanced RegExp: Unicode sets/lookbehind, catastrophic backtracking avoidance.
+31. Numeric correctness: floating point pitfalls, BigInt trade-offs, money handling.
+32. Large-scale state: immutability, structural sharing, persistent data structures.
+33. Frontend observability: RUM, long tasks, INP/CLS correlation, triage workflow.
+34. Public SDK design: semver, deprecation policies, feature flags, rollout safety.
+35. Error taxonomy and propagation; AggregateError, error.cause, and retries.
+36. Supply-chain security: npm resolution, lockfiles, integrity/signatures, provenance.
+37. Testing async/concurrency: fake timers vs real timers; flake reduction tactics.
+38. Hydration strategies: partial/streaming/Resumability; accessibility trade-offs.
+39. Service Workers: cache strategies, offline, background sync, update pitfalls.
+40. HTTP/2 and HTTP/3 impacts on bundling, multiplexing, and request patterns.
+41. Node HTTP clients: fetch vs http/https, streaming, cancellation, connection pools.
+42. Data structures perf: Map/Set vs Object/Array for various workloads.
+43. Plugin architectures: hooks, event buses, DI patterns in JS ecosystems.
+44. Build-less ESM in browsers: import maps, deployment, and cache busting.
+45. Monorepos at scale: workspaces, hoisting, constraints, change management.
+46. Differential serving: modern syntax delivery, fallbacks, and metrics.
+47. Cross-origin isolation (COOP/COEP) to enable SAB; security implications.
+48. Realms/SES sandboxing and safe evaluation patterns.
+49. Advanced caching: LRU/LFU in Node, memo invalidation, SWR strategies.
+50. Avoiding layout thrash: batching reads/writes, observers, virtualization.
+
+Experience Bands (JavaScript)
+0–2 years (Foundations)
+- Language basics: types, scope, hoisting, closures, this, prototypes
+- DOM/events: delegation, bubbling/capturing, default prevention
+- Async: callbacks, Promises, async/await, fetch basics
+- Arrays/objects: map/filter/reduce, immutability basics, shallow vs deep copy
+- Tooling: npm/yarn/pnpm basics, ESLint/Prettier, simple bundling
+- Web basics: HTTP status codes, REST basics, local/session storage
+
+3–6 years (Intermediate)
+- Performance: event loop, microtasks/macrotasks, debouncing/throttling, long tasks
+- Code quality: modular design, error handling taxonomy, testing async code
+- Browser APIs: IntersectionObserver, History API, Web Storage, Intl basics
+- Security: XSS basics, CSP fundamentals, safe serialization
+- Build: code splitting, tree-shaking, source maps, environment configs
+- TS adoption: gradual typing patterns, interfaces vs types (if applicable)
+
+7–10 years (Advanced)
+- Runtime internals: V8 shapes/ICs, deopts, memory leaks diagnosis
+- Concurrency: streams/backpressure, async iterators, cancellation (AbortController)
+- Architecture: SDK/public API design, feature flags, deprecation policies
+- i18n/a11y/perf trade-offs: INP/CLS, heavy UIs, virtualization strategies
+- Security at scale: Trusted Types, prototype pollution mitigation, supply chain
+- Observability: RUM, profiling, tracing correlations; performance budgets
+
+JavaScript Interview Questions (Easy → Advanced)
+1. What is JavaScript and where is it used?
+2. Difference between JavaScript and ECMAScript?
+3. How do you include JS in HTML (script tag, defer, async)?
+4. What are primitive types in JavaScript?
+5. What are non-primitive types in JavaScript?
+6. How to check a variable’s type?
+7. What is the difference between null and undefined?
+8. What does typeof null return and why?
+9. What is NaN and how do you check for it?
+10. Difference between == and ===?
+11. What is the purpose of the this keyword?
+12. How does this differ in strict mode?
+13. What is strict mode and how do you enable it?
+14. Explain scope in JavaScript.
+15. Difference between function scope and block scope.
+16. What are var, let, and const?
+17. What is hoisting?
+18. Are let/const hoisted? What is the TDZ?
+19. What are closures?
+20. Provide a simple closure example.
+21. What is a higher-order function?
+22. What is a callback function?
+23. What is callback hell?
+24. What are Promises?
+25. Promise states and transitions.
+26. then, catch, finally usage.
+27. What is async/await and why use it?
+28. How to handle errors with async/await?
+29. What is the event loop?
+30. Difference between microtasks and macrotasks.
+31. What does setTimeout do?
+32. What does setInterval do?
+33. What is clearTimeout/clearInterval?
+34. What is the call stack?
+35. What is the heap?
+36. What is memoization?
+37. What is currying?
+38. What are arrow functions?
+39. Differences between arrow and regular functions.
+40. What are default parameters?
+41. What is rest parameter syntax?
+42. What is the spread operator?
+43. Array methods: map, filter, reduce – differences.
+44. Difference between forEach and map.
+45. How to remove duplicates from an array.
+46. How to flatten a nested array.
+47. Difference between slice and splice.
+48. How to clone an array.
+49. How to clone an object.
+50. Difference between shallow and deep copy.
+51. What is Object.freeze and Object.seal?
+52. Difference between Object.keys, values, entries.
+53. What is destructuring (array/object)?
+54. Template literals and tagged templates.
+55. What is a Symbol and where to use it?
+56. What is BigInt and when to use it?
+57. What is JSON and how to parse/stringify?
+58. What is the difference between parseInt and Number?
+59. Explain truthy and falsy values.
+60. Explain implicit type coercion with examples.
+61. What is the nullish coalescing operator (??)?
+62. What is optional chaining (?.)?
+63. How to check if a value is an array.
+64. How to check if an object is empty.
+65. What is a generator function?
+66. What are iterables and iterators?
+67. Explain for...in vs for...of.
+68. What is Set and when to use it?
+69. What is Map and when to use it?
+70. WeakMap and WeakSet differences vs Map/Set.
+71. Explain prototype-based inheritance.
+72. What is the prototype chain?
+73. Difference between __proto__ and prototype.
+74. How do constructor functions work?
+75. What are ES6 classes?
+76. Class fields and private fields basics.
+77. What is super and how is it used?
+78. Static methods vs instance methods.
+79. What is the new operator doing under the hood?
+80. What is an IIFE and why use it?
+81. Debouncing: what, why, how to implement.
+82. Throttling: what, why, how to implement.
+83. Event propagation: bubbling and capturing.
+84. Event delegation and benefits.
+85. Prevent default vs stop propagation.
+86. What is DOMContentLoaded vs load?
+87. Data attributes and dataset API.
+88. What is localStorage vs sessionStorage.
+89. What are cookies? Pros/cons vs storage.
+90. What is IndexedDB basics.
+91. What is fetch and how to use it.
+92. How to handle fetch errors.
+93. CORS: what and why it occurs.
+94. Preflight requests and simple requests.
+95. What is same-origin policy.
+96. What is CSP (Content Security Policy) basics.
+97. What are Web Workers basics.
+98. What is requestAnimationFrame used for.
+99. How to measure performance in the browser.
+100. Source maps: what and why.
+101. What are modules in JS (ESM)?
+102. Difference between default and named exports.
+103. Dynamic import and use cases.
+104. Module scope vs script scope.
+105. Tree-shaking concept.
+106. Code splitting concept.
+107. What is bundling and why needed.
+108. Transpiling vs polyfilling.
+109. What is Babel and core-js.
+110. What are polyfills and how to include them.
+111. What is TypeScript at a high level.
+112. Benefits and trade-offs of TypeScript.
+113. Structural typing vs nominal typing (overview).
+114. What is duck typing.
+115. What is immutability and why it matters.
+116. Persistent data structures concept.
+117. Deep vs referential equality checks.
+118. What are pure vs impure functions.
+119. Idempotence in functions/APIs.
+120. Side effects and how to manage them.
+121. Error types: Error, TypeError, RangeError, etc.
+122. Custom errors and error.cause.
+123. AggregateError and when it appears.
+124. try/catch/finally best practices.
+125. Promise.all vs allSettled vs any vs race.
+126. Promise.race vs Promise.any differences.
+127. Promise chaining pitfalls.
+128. Async iterator protocols.
+129. for-await-of usage.
+130. AbortController/AbortSignal basics.
+131. Structured cloning vs JSON.
+132. PostMessage data transfer and cloning semantics.
+133. Proxies: what and main traps.
+134. Reflect API basics.
+135. Metaprogramming use cases with Proxy.
+136. Symbols for private-ish properties.
+137. What is Intl API and common uses.
+138. NumberFormat vs DateTimeFormat basics.
+139. Collation and locale-aware sorting.
+140. Floating point pitfalls and precision.
+141. When to use BigInt over Number.
+142. RegExp basics and flags.
+143. Lookahead/lookbehind and Unicode in RegExp.
+144. Catastrophic backtracking and how to avoid.
+145. Date pitfalls and time zones basics.
+146. Temporal proposal overview.
+147. What is garbage collection conceptually.
+148. Memory leaks: common causes in JS apps.
+149. Event listener leaks and cleanup patterns.
+150. WeakRef and FinalizationRegistry basics.
+151. V8 hidden classes and inline caches conceptually.
+152. Deoptimization: what triggers it generally.
+153. What patterns keep code optimized in engines.
+154. JIT warmup and cold-start considerations.
+155. Bundler differences: Webpack/Rollup/esbuild/Vite.
+156. Dev/prod builds: differences and pitfalls.
+157. Performance budgets in front-end apps.
+158. Long tasks and INP/CLS basics.
+159. Virtualization for large lists (concept).
+160. Avoiding layout thrashing.
+161. rAF vs rIC vs setTimeout usage.
+162. WebAssembly basics and when to use it.
+163. Passing data between JS and Wasm.
+164. Security: XSS and sanitization basics.
+165. Trusted Types basics.
+166. Prototype pollution: what and how to prevent.
+167. SOP bypass risks and mitigations basics.
+168. CSRF basics and tokens.
+169. Clickjacking and frame-ancestors.
+170. SRI (subresource integrity) basics.
+171. Package management: npm vs yarn vs pnpm basics.
+172. Semver: caret vs tilde.
+173. Lockfiles and why they matter.
+174. Dependency auditing and updates.
+175. ESM vs CJS interop basics.
+176. Dual packages concept (high-level).
+177. Top-level await basic implications.
+178. Import maps overview.
+179. Build-less development with native ESM.
+180. Monorepos and workspaces basics.
+181. Linting with ESLint; common rules.
+182. Formatting with Prettier; integration.
+183. Testing basics: unit vs integration vs e2e.
+184. Testing async code pitfalls.
+185. Fake timers vs real timers in tests.
+186. Test flakiness causes and mitigations.
+187. Accessibility basics in JS-heavy apps.
+188. Internationalization pitfalls and strategies.
+189. Error reporting in prod (Sourcemaps, stack traces).
+190. Observability basics: logs/metrics/traces.
+191. Feature flags in front-end apps basics.
+192. Config management per env.
+193. SDK/public API design basics.
+194. Backward compatibility strategies.
+195. Deprecation policies and migration guides.
+196. Designing plugin systems with hooks/events.
+197. Handling large data in the browser (streams/chunks).
+198. Worker/Worklet basics for parallelism.
+199. OffscreenCanvas overview.
+200. Patterns to ensure responsiveness under load.
