@@ -1,4 +1,4 @@
-# AWS Interview Questions - 3 Years Experience Level
+# AWS Interview Questions - 7 Years Experience Level (Senior Full-Stack Developer)
 
 ## Core AWS Fundamentals
 
@@ -344,3 +344,47 @@
     - CodeDeploy for deployment
     - CodePipeline for orchestration
     - Integrate with GitHub/GitLab
+
+## Advanced AWS Architecture (7+ Years Experience)
+
+61. **How would you design a multi-tenant SaaS application on AWS?**
+    - Use AWS Organizations for account isolation
+    - Implement tenant-specific VPCs or namespaces
+    - Use DynamoDB with tenant-specific partition keys
+    - Implement proper IAM policies for tenant isolation
+    - Use API Gateway with custom authorizers for tenant validation
+
+62. **How would you implement a disaster recovery strategy for a critical production system?**
+    - Multi-region active-active setup with Route 53 health checks
+    - RDS cross-region read replicas with automated failover
+    - S3 cross-region replication with versioning
+    - Lambda functions for automated failover procedures
+    - CloudFormation templates for infrastructure as code
+
+63. **How would you optimize costs for a large-scale application?**
+    - Implement auto-scaling groups with spot instances
+    - Use Reserved Instances and Savings Plans strategically
+    - Implement S3 lifecycle policies and intelligent tiering
+    - Use CloudWatch for cost monitoring and anomaly detection
+    - Implement resource tagging for cost allocation
+
+64. **How would you secure a microservices architecture on AWS?**
+    - Use VPC with private subnets and NAT gateways
+    - Implement service mesh with AWS App Mesh
+    - Use AWS Secrets Manager for sensitive data
+    - Implement API Gateway with custom authorizers
+    - Use AWS WAF and Shield for DDoS protection
+
+65. **How would you implement observability for a distributed system?**
+    - Use CloudWatch for metrics and logs
+    - Implement X-Ray for distributed tracing
+    - Use CloudWatch Synthetics for monitoring
+    - Implement custom dashboards and alarms
+    - Use AWS Config for compliance monitoring
+
+66. **How would you handle data migration from on-premises to AWS?**
+    - Use AWS DMS for database migration
+    - Use AWS Snowball for large data transfers
+    - Implement hybrid connectivity with Direct Connect
+    - Use AWS Storage Gateway for seamless integration
+    - Plan for minimal downtime with blue-green deployments

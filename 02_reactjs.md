@@ -1,4 +1,4 @@
-# React.js Interview Questions - Essential & Most Asked
+# React.js Interview Questions - 7 Years Experience Level (Senior Full-Stack Developer)
 
 ## Core React Fundamentals
 
@@ -326,3 +326,339 @@
     - Implement keyboard navigation
     - Ensure proper focus management
     - Use screen reader friendly content
+
+## Advanced React Architecture (7+ Years Experience)
+
+58. **How would you implement a custom React state management library?**
+    ```javascript
+    class CustomStateManager {
+        constructor(initialState = {}) {
+            this.state = initialState;
+            this.listeners = new Set();
+            this.middlewares = [];
+        }
+        
+        subscribe(listener) {
+            this.listeners.add(listener);
+            return () => this.listeners.delete(listener);
+        }
+        
+        setState(newState) {
+            const prevState = this.state;
+            this.state = { ...this.state, ...newState };
+            
+            this.middlewares.forEach(middleware => {
+                middleware(prevState, this.state);
+            });
+            
+            this.listeners.forEach(listener => listener(this.state));
+        }
+        
+        useMiddleware(middleware) {
+            this.middlewares.push(middleware);
+        }
+        
+        getState() {
+            return this.state;
+        }
+    }
+    
+    // React Hook
+    function useStateManager(stateManager) {
+        const [state, setState] = React.useState(stateManager.getState());
+        
+        React.useEffect(() => {
+            const unsubscribe = stateManager.subscribe(setState);
+            return unsubscribe;
+        }, [stateManager]);
+        
+        return [state, stateManager.setState.bind(stateManager)];
+    }
+    ```
+
+59. **How would you implement a custom React renderer for a different target?**
+    ```javascript
+    class CustomRenderer {
+        constructor(target) {
+            this.target = target;
+            this.rootContainer = null;
+        }
+        
+        createElement(type, props, ...children) {
+            return {
+                type,
+                props: {
+                    ...props,
+                    children: children.length === 1 ? children[0] : children
+                }
+            };
+        }
+        
+        render(element, container) {
+            this.rootContainer = container;
+            this.renderElement(element, container);
+        }
+        
+        renderElement(element, container) {
+            if (typeof element === 'string' || typeof element === 'number') {
+                container.appendChild(document.createTextNode(element));
+                return;
+            }
+            
+            const { type, props } = element;
+            const { children, ...otherProps } = props;
+            
+            if (typeof type === 'function') {
+                const component = new type(props);
+                const rendered = component.render();
+                this.renderElement(rendered, container);
+            } else {
+                const domElement = document.createElement(type);
+                
+                Object.keys(otherProps).forEach(key => {
+                    if (key === 'className') {
+                        domElement.className = otherProps[key];
+                    } else if (key.startsWith('on')) {
+                        const eventType = key.toLowerCase().substring(2);
+                        domElement.addEventListener(eventType, otherProps[key]);
+                    } else {
+                        domElement.setAttribute(key, otherProps[key]);
+                    }
+                });
+                
+                if (children) {
+                    if (Array.isArray(children)) {
+                        children.forEach(child => this.renderElement(child, domElement));
+                    } else {
+                        this.renderElement(children, domElement);
+                    }
+                }
+                
+                container.appendChild(domElement);
+            }
+        }
+    }
+    ```
+
+60. **How would you implement a custom React concurrent feature?**
+    ```javascript
+    class ConcurrentScheduler {
+        constructor() {
+            this.taskQueue = [];
+            this.isProcessing = false;
+            this.currentPriority = 'normal';
+        }
+        
+        scheduleTask(task, priority = 'normal') {
+            this.taskQueue.push({ task, priority, id: Date.now() });
+            this.taskQueue.sort((a, b) => {
+                const priorityOrder = { high: 3, normal: 2, low: 1 };
+                return priorityOrder[b.priority] - priorityOrder[a.priority];
+            });
+            
+            if (!this.isProcessing) {
+                this.processTasks();
+            }
+        }
+        
+        async processTasks() {
+            this.isProcessing = true;
+            
+            while (this.taskQueue.length > 0) {
+                const { task } = this.taskQueue.shift();
+                
+                try {
+                    await task();
+                } catch (error) {
+                    console.error('Task failed:', error);
+                }
+                
+                // Yield control to allow other tasks to run
+                await new Promise(resolve => setTimeout(resolve, 0));
+            }
+            
+            this.isProcessing = false;
+        }
+        
+        useConcurrentTask(task, priority = 'normal') {
+            const [isRunning, setIsRunning] = React.useState(false);
+            const [result, setResult] = React.useState(null);
+            const [error, setError] = React.useState(null);
+            
+            const runTask = React.useCallback(async () => {
+                setIsRunning(true);
+                setError(null);
+                
+                try {
+                    const taskResult = await new Promise((resolve, reject) => {
+                        this.scheduleTask(async () => {
+                            try {
+                                const result = await task();
+                                resolve(result);
+                            } catch (err) {
+                                reject(err);
+                            }
+                        }, priority);
+                    });
+                    
+                    setResult(taskResult);
+                } catch (err) {
+                    setError(err);
+                } finally {
+                    setIsRunning(false);
+                }
+            }, [task, priority]);
+            
+            return { runTask, isRunning, result, error };
+        }
+    }
+    ```
+
+61. **How would you implement a custom React error boundary with advanced features?**
+    ```javascript
+    class AdvancedErrorBoundary extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                hasError: false,
+                error: null,
+                errorInfo: null,
+                retryCount: 0
+            };
+        }
+        
+        static getDerivedStateFromError(error) {
+            return { hasError: true };
+        }
+        
+        componentDidCatch(error, errorInfo) {
+            this.setState({
+                error,
+                errorInfo,
+                retryCount: this.state.retryCount + 1
+            });
+            
+            // Log to external service
+            this.logErrorToService(error, errorInfo);
+            
+            // Report to monitoring service
+            if (this.props.onError) {
+                this.props.onError(error, errorInfo);
+            }
+        }
+        
+        logErrorToService(error, errorInfo) {
+            // Implementation for logging to external service
+            console.error('Error logged:', { error, errorInfo });
+        }
+        
+        handleRetry = () => {
+            this.setState({
+                hasError: false,
+                error: null,
+                errorInfo: null
+            });
+        }
+        
+        handleReset = () => {
+            this.setState({
+                hasError: false,
+                error: null,
+                errorInfo: null,
+                retryCount: 0
+            });
+        }
+        
+        render() {
+            if (this.state.hasError) {
+                if (this.props.fallback) {
+                    return this.props.fallback(this.state.error, this.handleRetry);
+                }
+                
+                return (
+                    <div className="error-boundary">
+                        <h2>Something went wrong</h2>
+                        <details>
+                            <summary>Error Details</summary>
+                            <pre>{this.state.error && this.state.error.toString()}</pre>
+                            <pre>{this.state.errorInfo.componentStack}</pre>
+                        </details>
+                        <button onClick={this.handleRetry}>Retry</button>
+                        <button onClick={this.handleReset}>Reset</button>
+                        <p>Retry count: {this.state.retryCount}</p>
+                    </div>
+                );
+            }
+            
+            return this.props.children;
+        }
+    }
+    ```
+
+62. **How would you implement a custom React performance monitoring system?**
+    ```javascript
+    class PerformanceMonitor {
+        constructor() {
+            this.metrics = new Map();
+            this.observers = new Set();
+        }
+        
+        startMeasure(name) {
+            performance.mark(`${name}-start`);
+        }
+        
+        endMeasure(name) {
+            performance.mark(`${name}-end`);
+            performance.measure(name, `${name}-start`, `${name}-end`);
+            
+            const measure = performance.getEntriesByName(name)[0];
+            this.metrics.set(name, measure.duration);
+            
+            this.notifyObservers(name, measure.duration);
+        }
+        
+        measureComponent(Component) {
+            return class extends React.Component {
+                componentDidMount() {
+                    this.monitor.startMeasure(`${Component.name}-mount`);
+                }
+                
+                componentDidUpdate() {
+                    this.monitor.startMeasure(`${Component.name}-update`);
+                }
+                
+                render() {
+                    return <Component {...this.props} />;
+                }
+            };
+        }
+        
+        subscribe(observer) {
+            this.observers.add(observer);
+            return () => this.observers.delete(observer);
+        }
+        
+        notifyObservers(metricName, duration) {
+            this.observers.forEach(observer => {
+                observer(metricName, duration);
+            });
+        }
+        
+        getMetrics() {
+            return Object.fromEntries(this.metrics);
+        }
+    }
+    
+    // Usage
+    const monitor = new PerformanceMonitor();
+    
+    function usePerformanceMonitor(componentName) {
+        React.useEffect(() => {
+            monitor.startMeasure(`${componentName}-render`);
+            
+            return () => {
+                monitor.endMeasure(`${componentName}-render`);
+            };
+        });
+    }
+    ```

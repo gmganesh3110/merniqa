@@ -1,4 +1,4 @@
-# DevOps Interview Questions - 3 Years Experience Level
+# DevOps Interview Questions - 7 Years Experience Level (Senior Full-Stack Developer)
 
 ## Docker
 
@@ -464,3 +464,47 @@
     - Cluster Autoscaler
     - Custom metrics scaling
     - Resource limits and requests
+
+## Advanced DevOps Architecture (7+ Years Experience)
+
+63. **How would you design a GitOps workflow for a microservices architecture?**
+    - Use ArgoCD or Flux for GitOps implementation
+    - Implement environment-specific branches (dev, staging, prod)
+    - Use Helm charts for application packaging
+    - Implement automated testing in CI/CD pipeline
+    - Use Kubernetes operators for complex stateful applications
+
+64. **How would you implement a multi-cluster Kubernetes strategy?**
+    - Use cluster federation or multi-cluster management tools
+    - Implement cross-cluster service discovery
+    - Use consistent networking policies across clusters
+    - Implement centralized logging and monitoring
+    - Use GitOps for consistent configuration management
+
+65. **How would you design a disaster recovery strategy for containerized applications?**
+    - Implement multi-region Kubernetes clusters
+    - Use persistent volume replication
+    - Implement automated backup and restore procedures
+    - Use service mesh for traffic management
+    - Implement chaos engineering for resilience testing
+
+66. **How would you optimize CI/CD pipeline performance for large teams?**
+    - Implement parallel job execution
+    - Use distributed build systems
+    - Implement intelligent caching strategies
+    - Use container-based build environments
+    - Implement pipeline optimization and monitoring
+
+67. **How would you implement security scanning in a DevSecOps pipeline?**
+    - Integrate SAST/DAST tools in CI/CD
+    - Use container image scanning with Trivy/Clair
+    - Implement infrastructure as code security scanning
+    - Use dependency vulnerability scanning
+    - Implement runtime security monitoring
+
+68. **How would you design a monitoring and alerting strategy for a distributed system?**
+    - Implement distributed tracing with Jaeger/Zipkin
+    - Use Prometheus for metrics collection
+    - Implement log aggregation with ELK/Loki
+    - Use Grafana for visualization and alerting
+    - Implement SLI/SLO monitoring and alerting

@@ -1,4 +1,4 @@
-# JavaScript Interview Questions - Essential & Most Asked
+# JavaScript Interview Questions - 7 Years Experience Level (Senior Full-Stack Developer)
 
 ## Core JavaScript Fundamentals
 
@@ -205,3 +205,378 @@
 - 502 Bad Gateway: Invalid response from another server
 - 503 Service Unavailable: Server unavailable
 - 504 Gateway Timeout: Server took too long to respond
+
+## Advanced JavaScript Concepts (7+ Years Experience)
+
+39. **How would you implement a custom event system in JavaScript?**
+    ```javascript
+    class EventEmitter {
+        constructor() {
+            this.events = {};
+        }
+        
+        on(event, callback) {
+            if (!this.events[event]) {
+                this.events[event] = [];
+            }
+            this.events[event].push(callback);
+        }
+        
+        emit(event, ...args) {
+            if (this.events[event]) {
+                this.events[event].forEach(callback => callback(...args));
+            }
+        }
+        
+        off(event, callback) {
+            if (this.events[event]) {
+                this.events[event] = this.events[event].filter(cb => cb !== callback);
+            }
+        }
+    }
+    ```
+
+40. **How would you implement a custom Promise library?**
+    ```javascript
+    class CustomPromise {
+        constructor(executor) {
+            this.state = 'pending';
+            this.value = undefined;
+            this.reason = undefined;
+            this.onFulfilledCallbacks = [];
+            this.onRejectedCallbacks = [];
+            
+            const resolve = (value) => {
+                if (this.state === 'pending') {
+                    this.state = 'fulfilled';
+                    this.value = value;
+                    this.onFulfilledCallbacks.forEach(callback => callback(value));
+                }
+            };
+            
+            const reject = (reason) => {
+                if (this.state === 'pending') {
+                    this.state = 'rejected';
+                    this.reason = reason;
+                    this.onRejectedCallbacks.forEach(callback => callback(reason));
+                }
+            };
+            
+            try {
+                executor(resolve, reject);
+            } catch (error) {
+                reject(error);
+            }
+        }
+        
+        then(onFulfilled, onRejected) {
+            return new CustomPromise((resolve, reject) => {
+                if (this.state === 'fulfilled') {
+                    try {
+                        const result = onFulfilled ? onFulfilled(this.value) : this.value;
+                        resolve(result);
+                    } catch (error) {
+                        reject(error);
+                    }
+                } else if (this.state === 'rejected') {
+                    try {
+                        const result = onRejected ? onRejected(this.reason) : this.reason;
+                        resolve(result);
+                    } catch (error) {
+                        reject(error);
+                    }
+                } else {
+                    this.onFulfilledCallbacks.push((value) => {
+                        try {
+                            const result = onFulfilled ? onFulfilled(value) : value;
+                            resolve(result);
+                        } catch (error) {
+                            reject(error);
+                        }
+                    });
+                    
+                    this.onRejectedCallbacks.push((reason) => {
+                        try {
+                            const result = onRejected ? onRejected(reason) : reason;
+                            resolve(result);
+                        } catch (error) {
+                            reject(error);
+                        }
+                    });
+                }
+            });
+        }
+    }
+    ```
+
+41. **How would you implement a custom async/await using generators?**
+    ```javascript
+    function asyncToGenerator(generatorFunction) {
+        return function(...args) {
+            const generator = generatorFunction.apply(this, args);
+            
+            return new Promise((resolve, reject) => {
+                function handle(result) {
+                    if (result.done) {
+                        resolve(result.value);
+                    } else {
+                        Promise.resolve(result.value)
+                            .then(res => handle(generator.next(res)))
+                            .catch(err => handle(generator.throw(err)));
+                    }
+                }
+                
+                handle(generator.next());
+            });
+        };
+    }
+    
+    // Usage
+    const myAsyncFunction = asyncToGenerator(function* () {
+        const result = yield fetch('/api/data');
+        const data = yield result.json();
+        return data;
+    });
+    ```
+
+42. **How would you implement a custom debounce function with advanced features?**
+    ```javascript
+    function advancedDebounce(func, wait, options = {}) {
+        const {
+            leading = false,
+            trailing = true,
+            maxWait = null
+        } = options;
+        
+        let timeoutId;
+        let lastCallTime = 0;
+        let lastInvokeTime = 0;
+        let lastArgs;
+        let lastThis;
+        let result;
+        
+        function invokeFunc(time) {
+            const args = lastArgs;
+            const thisArg = lastThis;
+            
+            lastArgs = lastThis = undefined;
+            lastInvokeTime = time;
+            result = func.apply(thisArg, args);
+            return result;
+        }
+        
+        function leadingEdge(time) {
+            lastInvokeTime = time;
+            timeoutId = setTimeout(timerExpired, wait);
+            return leading ? invokeFunc(time) : result;
+        }
+        
+        function remainingWait(time) {
+            const timeSinceLastCall = time - lastCallTime;
+            const timeSinceLastInvoke = time - lastInvokeTime;
+            const timeWaiting = wait - timeSinceLastCall;
+            
+            return maxWait ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+        }
+        
+        function shouldInvoke(time) {
+            const timeSinceLastCall = time - lastCallTime;
+            const timeSinceLastInvoke = time - lastInvokeTime;
+            
+            return (lastCallTime === 0) || (timeSinceLastCall >= wait) || 
+                   (timeSinceLastCall < 0) || (maxWait && timeSinceLastInvoke >= maxWait);
+        }
+        
+        function timerExpired() {
+            const time = Date.now();
+            if (shouldInvoke(time)) {
+                return trailingEdge(time);
+            }
+            timeoutId = setTimeout(timerExpired, remainingWait(time));
+        }
+        
+        function trailingEdge(time) {
+            timeoutId = undefined;
+            if (trailing && lastArgs) {
+                return invokeFunc(time);
+            }
+            lastArgs = lastThis = undefined;
+            return result;
+        }
+        
+        function debounced(...args) {
+            const time = Date.now();
+            const isInvoking = shouldInvoke(time);
+            
+            lastArgs = args;
+            lastThis = this;
+            lastCallTime = time;
+            
+            if (isInvoking) {
+                if (timeoutId === undefined) {
+                    return leadingEdge(lastCallTime);
+                }
+                if (maxWait) {
+                    timeoutId = setTimeout(timerExpired, wait);
+                    return invokeFunc(lastCallTime);
+                }
+            }
+            if (timeoutId === undefined) {
+                timeoutId = setTimeout(timerExpired, wait);
+            }
+            return result;
+        }
+        
+        debounced.cancel = function() {
+            if (timeoutId !== undefined) {
+                clearTimeout(timeoutId);
+            }
+            lastInvokeTime = 0;
+            lastCallTime = 0;
+            lastArgs = lastThis = timeoutId = undefined;
+        };
+        
+        debounced.flush = function() {
+            return timeoutId === undefined ? result : trailingEdge(Date.now());
+        };
+        
+        debounced.pending = function() {
+            return timeoutId !== undefined;
+        };
+        
+        return debounced;
+    }
+    ```
+
+43. **How would you implement a custom memoization function with cache management?**
+    ```javascript
+    function advancedMemoize(fn, options = {}) {
+        const {
+            maxSize = Infinity,
+            ttl = Infinity,
+            keyGenerator = (...args) => JSON.stringify(args)
+        } = options;
+        
+        const cache = new Map();
+        const timestamps = new Map();
+        
+        function isExpired(key) {
+            if (ttl === Infinity) return false;
+            const timestamp = timestamps.get(key);
+            return Date.now() - timestamp > ttl;
+        }
+        
+        function cleanup() {
+            for (const [key, timestamp] of timestamps.entries()) {
+                if (Date.now() - timestamp > ttl) {
+                    cache.delete(key);
+                    timestamps.delete(key);
+                }
+            }
+        }
+        
+        function evictLRU() {
+            if (cache.size >= maxSize) {
+                const firstKey = cache.keys().next().value;
+                cache.delete(firstKey);
+                timestamps.delete(firstKey);
+            }
+        }
+        
+        return function memoized(...args) {
+            const key = keyGenerator(...args);
+            
+            if (cache.has(key) && !isExpired(key)) {
+                return cache.get(key);
+            }
+            
+            const result = fn.apply(this, args);
+            
+            if (cache.size >= maxSize) {
+                evictLRU();
+            }
+            
+            cache.set(key, result);
+            timestamps.set(key, Date.now());
+            
+            if (ttl !== Infinity) {
+                setTimeout(cleanup, ttl);
+            }
+            
+            return result;
+        };
+    }
+    ```
+
+44. **How would you implement a custom reactive system similar to Vue.js?**
+    ```javascript
+    class ReactiveSystem {
+        constructor() {
+            this.targetMap = new WeakMap();
+            this.activeEffect = null;
+            this.effects = new Set();
+        }
+        
+        track(target, key) {
+            if (!this.activeEffect) return;
+            
+            let depsMap = this.targetMap.get(target);
+            if (!depsMap) {
+                this.targetMap.set(target, (depsMap = new Map()));
+            }
+            
+            let dep = depsMap.get(key);
+            if (!dep) {
+                depsMap.set(key, (dep = new Set()));
+            }
+            
+            dep.add(this.activeEffect);
+        }
+        
+        trigger(target, key) {
+            const depsMap = this.targetMap.get(target);
+            if (!depsMap) return;
+            
+            const dep = depsMap.get(key);
+            if (dep) {
+                dep.forEach(effect => effect());
+            }
+        }
+        
+        effect(fn) {
+            const effect = () => {
+                this.activeEffect = effect;
+                this.effects.add(effect);
+                fn();
+                this.activeEffect = null;
+            };
+            
+            effect();
+            return effect;
+        }
+        
+        reactive(obj) {
+            return new Proxy(obj, {
+                get(target, key) {
+                    this.track(target, key);
+                    return target[key];
+                },
+                set(target, key, value) {
+                    target[key] = value;
+                    this.trigger(target, key);
+                    return true;
+                }
+            });
+        }
+    }
+    
+    // Usage
+    const reactiveSystem = new ReactiveSystem();
+    const state = reactiveSystem.reactive({ count: 0 });
+    
+    reactiveSystem.effect(() => {
+        console.log(`Count is: ${state.count}`);
+    });
+    
+    state.count++; // Triggers the effect
+    ```
