@@ -19,6 +19,7 @@
 18. What is the difference between map(), filter(), and reduce()?
 19. What is the difference between forEach() and map()?
 20. What is the difference between slice() and splice()?
+21. 
 
 
 # ReactJs
