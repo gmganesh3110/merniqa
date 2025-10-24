@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume of G M Ganesh — Full Stack Engineer with 3.5+ years of experience.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230f172a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-size='28' font-family='Arial' fill='white'%3EGG%3C/text%3E%3C/svg%3E">
+    <title>G M Ganesh — Full Stack Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #0f172a; /* slate-900 */
+            background: #f8fafc; /* slate-50 */
+            padding-bottom: 8px;
+            padding-inline: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 10px 28px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+        }
+
+        header.header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0; /* slate-200 */
+            padding-bottom: 8px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #0f172a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            color: #475569; /* slate-600 */
+            margin-top: 8px;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #0f172a;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #334155; /* slate-700 */
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px 18px;
+            margin-bottom: 12px;
+        }
+
+        .skill-item {
+            font-size: 12.5px;
+            margin-bottom: 6px;
+            color: #334155;
+        }
+
+        .skill-item strong {
+            color: #0f172a;
+        }
+
+        .experience-item {
+            margin-bottom: 16px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin: 2px 0;
+            color: #0f172a;
+        }
+
+        .date {
+            font-style: italic;
+            font-size: 12px;
+            color: #64748b; /* slate-500 */
+        }
+
+        .responsibilities {
+            margin-top: 6px;
+        }
+
+        .responsibilities li {
+            margin-left: 18px;
+            margin-bottom: 4px;
+            font-size: 12.3px;
+            text-align: justify;
+            color: #334155;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: bold;
+            font-size: 13.5px;
+            color: #0f172a;
+        }
+
+        .institution {
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .download-buttons {
+            text-align: center;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        button {
+            background: #0f172a;
+            color: #ffffff;
+            border: none;
+            padding: 12px 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: background 0.2s, transform 0.05s ease-in-out;
+        }
+
+        button:hover {
+            background: #1e293b; /* slate-800 */
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        a {
+            color: #0ea5e9; /* sky-500 */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #0ea5e9;
+            outline-offset: 2px;
+            border-radius: 6px;
+        }
+
+        @media print {
+            @page { size: A4; margin: 10mm; }
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; padding: 0; border-radius: 0; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 14px; margin-top: 14px; margin-bottom: 6px; }
+            .summary { font-size: 12.5px; margin-bottom: 8px; }
+            .download-buttons { display: none; }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 12px;
+            }
+            .container {
+                padding: 16px 14px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .job-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+            h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" role="document">
+        <header class="header" role="banner">
+            <h1 aria-label="Name">G M GANESH</h1>
+            <div class="contact-info" aria-label="Contact information">
+                <a href="https://devportfolio-khzq.onrender.com/" target="_blank" rel="noopener">Portfolio</a>
+                &nbsp;•&nbsp; <a href="https://www.linkedin.com/in/g-m-ganesh-5a8114259" target="_blank" rel="noopener">LinkedIn</a>
+                &nbsp;•&nbsp; <a href="https://github.com/gmganesh3110" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </header>
+
+        <main role="main">
+            <section aria-labelledby="summary-heading">
+                <h2 id="summary-heading">Professional Summary</h2>
+                <p class="summary">
+                    Results-driven QA Engineer with a proven track record at Magificenz Tech Solution, automating over 200
+                    regression tests and enhancing coverage. Skilled in Selenium and API testing, I excel in collaborative
+                    environments, ensuring high-quality deliverables through effective defect tracking and performance optimization.
+                </p>
+            </section>
+
+            <section aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Key Skills and Tools</h2>
+                <div class="skills-grid">
+                    <div>
+                        <div class="skill-item"><strong>Testing:</strong> Web apps, mobile web, native Android/iOS apps, functional, regression, performance, security testing</div>
+                        <div class="skill-item"><strong>Automation:</strong> Selenium WebDriver, Playwright, NSM workflow, testRigor</div>
+                        <div class="skill-item"><strong>Frameworks:</strong> Cucumber-TestNG, Playwright Test</div>
+                        <div class="skill-item"><strong>IDE:</strong> VS Code, IntelliJ, Cursor AI</div>
+                        <div class="skill-item"><strong>API & Performance Testing:</strong> Postman-Newman, Rest Assured, JMeter</div>
+                        <div class="skill-item"><strong>Security Testing:</strong> Burp Suite; knowledgeable about OWASP Top 10</div>
+                        <div class="skill-item"><strong>Defect and Test Management:</strong> Jira, TestRail, QASE</div>
+                    </div>
+                    <div>
+                        <div class="skill-item"><strong>Programming:</strong> Java, JavaScript</div>
+                        <div class="skill-item"><strong>Database:</strong> PostgreSQL, pgAdmin, DBeaver, MongoDB</div>
+                        <div class="skill-item"><strong>CI/CD & Version Control:</strong> Git, GitHub, Jenkins</div>
+                        <div class="skill-item"><strong>Emulators:</strong> Android Studio, Xcode</div>
+                        <div class="skill-item"><strong>Debugging & Logs:</strong> AWS CloudWatch, pm2 server logs, Grafana logs, Chrome DevTools, Charles Proxy (Android/iOS)</div>
+                        <div class="skill-item"><strong>Dev Skills:</strong> Basic understanding of the MERN stack</div>
+                        <div class="skill-item"><strong>Other Skills:</strong> Requirement analysis, impact analysis, Agile methodologies</div>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Magificenz Tech Solution | Bengaluru</div>
+                            <div class="job-title">QA Engineer | SDET</div>
+                        </div>
+                        <div class="date">11/2023 - Current</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Led end-to-end UPI testing across web, mobile, and backend layers.</li>
+                        <li>Automated 200+ regressions with Playwright/Cucumber, boosting coverage and throughput via API, perf, and security testing.</li>
+                        <li>Stabilized production using CloudWatch, Grafana, and DevTools to quickly resolve issues.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Agus System</div>
+                            <div class="job-title">Software Test Engineer — Freelance</div>
+                        </div>
+                        <div class="date">12/2022 - 06/2023</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Validated end-to-end e-commerce flows: payments, checkout, order lifecycle.</li>
+                        <li>Built reusable Selenium suites, cutting manual effort.</li>
+                        <li>Ensured compatibility and responsiveness via cross-browser and API performance testing (Postman/JMeter).</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="company">Individual Learning Ltd.</div>
+                            <div class="job-title">Content Integration and Testing (CIT) Validator</div>
+                        </div>
+                        <div class="date">12/2019 - 10/2022</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Validated mobile/web apps for UI/UX, API integrity, and functional reliability (Android/iOS).</li>
+                        <li>Improved issue resolution by combining Postman API testing with Charles Proxy debugging.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+                <div class="education-item">
+                    <div class="institution">SJB Institute of Technology | Bangalore, Karnataka</div>
+                    <div class="degree">Bachelor of Engineering (B.E.) in Mechanical Engineering</div>
+                    <div class="date">07/2017</div>
+                </div>
+            </section>
+        </main>
+
+        <div class="download-buttons" aria-label="Download options">
+            <button onclick="window.print()" aria-label="Download as PDF">Download as PDF</button>
+            <button onclick="downloadAsDoc()" aria-label="Download as DOC">Download as DOC</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadAsDoc() {
+            const content = document.querySelector('.container').innerHTML;
+            const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' " +
+                "xmlns:w='urn:schemas-microsoft-com:office:word' " +
+                "xmlns='http://www.w3.org/TR/REC-html40'>" +
+                "<head><meta charset='utf-8'><title>Resume</title></head><body>";
+            const footer = "</body></html>";
+            const sourceHTML = header + content + footer;
+
+            const blob = new Blob(['\ufeff', sourceHTML], {
+                type: 'application/msword'
+            });
+
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'G_M_Ganesh_Resume.doc';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+
+</html>

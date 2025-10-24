@@ -50,3 +50,9 @@ console.log(findSecondLarget([10,20,20,-10,-20,-20]))
 console.log(findSecondLarget(["10","20","20","-10","-20","-20"]))
 // duplicate numbers and empty array
 console.log(findSecondLarget([]))
+
+try {
+    
+} catch (error) {
+    
+}

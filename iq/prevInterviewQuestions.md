@@ -21,7 +21,9 @@
 21. How do you manage load balancing and autoscaling in AWS
 22. How do you improve performance using userMemo and useCallback?
 23. How context api works in React?
-
+24. How you handle deletion of user which is foregin key for posts and comments
+25. How to you handle unneccary rerenders
+26. what is useEffect and useLayoutEffect
 DSA Questions
 
 1. Array Flat
@@ -30,3 +32,4 @@ DSA Questions
 4. palindrom
 
 <!-- Array Flat JS Solution -->
+
